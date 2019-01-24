@@ -2,6 +2,9 @@
 require 'game'
 require 'tty-prompt'
 
+# This call is the router that start the game after we run the app.rb programme.
+# Basicly it will perform the starting point and send an order to our controller how will manage the rest (he is call "game")
+
 class Application
   def initialize
     @game = Game.new
