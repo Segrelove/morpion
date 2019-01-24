@@ -4,6 +4,9 @@ require 'boardcase'
 require 'show'
 
 class Game
+
+  @@rounds = 0
+  
   def initialize 
     # @show = Show.new
     # @board = Board.new
@@ -11,17 +14,18 @@ class Game
   end
 
   def create_game
-    params_player_one = Show.new.create_player
-    player_one = Player.new(params_player_one)
+    params_player_one = Show.new.create_player_x
+    player_one = Player.new(params_player_one[:name], params_player_one[:type])
     player_one.save
 
-    params_player_two = Show.new.create_player
-    player_two = Player.new(params_player_two)
+    params_player_two = Show.new.create_player_o
+    player_two = Player.new(params_player_two[:name], params_player_two[:type])
     player_two.save
-    # launch_board
+    update_game
   end
 
-  # def launch_board
-  #   @board = Board.new
-  # end
+  def update_game
+    @board = Board.new
+    @board.display_board
+  end
 end

@@ -26,6 +26,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     timers (4.3.0)
     tty-color (0.4.3)
     tty-cursor (0.6.0)
@@ -40,6 +42,7 @@ GEM
       tty-screen (~> 0.6.4)
       wisper (~> 2.0.0)
     tty-screen (0.6.5)
+    unicode-display_width (1.4.1)
     wisper (2.0.0)
 
 PLATFORMS
@@ -49,6 +52,7 @@ DEPENDENCIES
   csv
   pry
   rspec
+  terminal-table
   tty-prompt
 
 RUBY VERSION
