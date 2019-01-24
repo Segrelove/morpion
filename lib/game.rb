@@ -33,7 +33,7 @@ end
 testrounds_win = ["A1", "B3", "C2", "A2", "B2", "A3"]
 testrounds_not = ["A1", "B3", "C2", "A2", "B2", "C1"]
 
-def check_if_won(rounds)
+def check_if_won(round)
   # rounds est l'array des tours joués par les deux joueurs
   winning_combinations = [
     ["A1", "A2", "A3"],
@@ -49,11 +49,9 @@ def check_if_won(rounds)
   # Est-ce que les trois éléments d'une des combinaisons gagnantes se retrouve dans l'array?
   winning_combinations.each do |winning|
     test = false
-    if testround.include?(winning[0]) && testround.include?(winning[1]) && testround.include?(winning[2])
+    if round.include?(winning[0]) && round.include?(winning[1]) && round.include?(winning[2])
       test = true
     end
     return test
   end
 end
-
-puts check_if_won(testrounds_win)
