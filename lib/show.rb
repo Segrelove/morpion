@@ -9,4 +9,7 @@ class Show
     name = gets.chomp
     params = {name:name, type: "o"}
   end
+  def update_player
+
+  end
 end
