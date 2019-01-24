@@ -3,6 +3,7 @@ require "board"
 require "boardcase"
 require "show"
 
+# This is the controller. It will ask the board object to create the table game and will ask the view and player object to start gaming ! 
 class Game
   @@rounds = 0
 
