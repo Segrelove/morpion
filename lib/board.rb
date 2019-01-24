@@ -28,7 +28,8 @@ class Board
     @cases.map { |x| x == @result1 ? 'xXx' : x }
     @rows[@result1] = "xXx"
     if check_if_won(@@winner_x)
-      puts "XxX a gagné !"
+      puts "Joueur 1 a gagné !"
+      display_board
       Application.new.perform
     end 
     #
@@ -46,7 +47,7 @@ class Board
     @rows[@result2] = "oOo"
     @@count = @@count + 1
     if check_if_won(@@winner_o)
-      puts "oOo a gagné !"
+      puts "Joueur 2 a gagné !"
       Application.new.perform
     end 
     
@@ -59,13 +60,10 @@ class Board
     @rows << [@cases[6], @cases[7], @cases[8]]
     @table = Terminal::Table.new :rows => @rows
     puts @table
-    if @@count < 5
+    if @@count < 4
       puts "Tour n°#{@@count}"
       choice
-      puts "sortie boucle choice"
       update_board
-      puts "sortie boucle update_board"
-
     end
   end
   
