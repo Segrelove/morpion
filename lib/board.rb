@@ -6,15 +6,15 @@ class Board
   attr_accessor :case_name
 
   def initialize
-    @A1 = BoardCase.new(1)
-    @A2 = BoardCase.new(2)
-    @A3 = BoardCase.new(3)
-    @B1 = BoardCase.new(4)
-    @B2 = BoardCase.new(5)
-    @B3 = BoardCase.new(6)
-    @C1 = BoardCase.new(7)
-    @C2 = BoardCase.new(8)
-    @C3 = BoardCase.new(9)
+    # @A1 = BoardCase.new(1)
+    # @A2 = BoardCase.new(2)
+    # @A3 = BoardCase.new(3)
+    # @B1 = BoardCase.new(4)
+    # @B2 = BoardCase.new(5)
+    # @B3 = BoardCase.new(6)
+    # @C1 = BoardCase.new(7)
+    # @C2 = BoardCase.new(8)
+    # @C3 = BoardCase.new(9)
     @cases = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
 
@@ -26,11 +26,8 @@ class Board
     p @cases[@result1]
     p @cases.map { |x| x == @result1 ? 'X' : x }
     @rows[@result1] = "X"
-  end
-
-  def choice_o
     puts "Quel choix souhaites-tu, joueur 2?"
-    binding.pry
+    # binding.pry
     @choice2 = gets.chomp.to_i
     @result2 = @choice2 - 1
     @cases[@result2] = "O"
@@ -38,6 +35,17 @@ class Board
     p @cases.map { |x| x == @result2 ? 'O' : x }
     @rows[@result2] = "O"
   end
+
+  # def choice_o
+  #   puts "Quel choix souhaites-tu, joueur 2?"
+  #   # binding.pry
+  #   @choice2 = gets.chomp.to_i
+  #   @result2 = @choice2 - 1
+  #   @cases[@result2] = "O"
+  #   p @cases[@result2]
+  #   p @cases.map { |x| x == @result2 ? 'O' : x }
+  #   @rows[@result2] = "O"
+  # end
 
   def update_board 
     @rows = []
@@ -47,11 +55,16 @@ class Board
     @table = Terminal::Table.new :rows => @rows
     puts @table
     i = 0
-    while i < 1
+    # while i < 1
+    #   choice_x 
+    #   update_board
+    #   choice_o
+    #   update_board
+    #   i += 1
+    # end
       choice_x 
-      choice_o
-      i += 1
-    end
-    update_board
+      update_board
+      # choice_o
+      # update_board
   end
 end
