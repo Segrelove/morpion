@@ -1,3 +1,6 @@
+# This class create a player and ask his name. 
+# The first player will be asign the "X" sticker to play and the second player will be asign the "O" stickers automaticly.
+
 class Show
   def create_player_x
     puts "Quel est le nom du premier joueur?"
