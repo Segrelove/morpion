@@ -19,20 +19,20 @@ class Board
     @choice1 = gets.chomp.to_i
     @result1 = @choice1 - 1
     @@winner_x << @choice1
-    @cases[@result1] = "X"
-    @cases.map { |x| x == @result1 ? 'X' : x }
-    @rows[@result1] = "X"
+    @cases[@result1] = "xXx"
+    @cases.map { |x| x == @result1 ? 'xXx' : x }
+    @rows[@result1] = "xXx"
 
     ouech = @cases.map {|x| Integer(x) rescue nil }.compact
     puts "Quel choix souhaites-tu, joueur 2?"
     puts "Tes choix : #{ouech}"
     @choice2 = gets.chomp.to_i
     @result2 = @choice2 - 1
-    @cases[@result2] = "O"
+    @cases[@result2] = "oOo"
     @@winner_o << @choice2
     @cases[@result2]
-    @cases.map { |x| x == @result2 ? 'O' : x }
-    @rows[@result2] = "O"
+    @cases.map { |x| x == @result2 ? 'oOo' : x }
+    @rows[@result2] = "oOo"
     @@count = @@count + 1
   end
 
