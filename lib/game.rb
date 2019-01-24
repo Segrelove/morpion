@@ -32,14 +32,14 @@ testrounds_not = ["A1", "B3", "C2", "A2", "B2", "C1"]
 def check_if_won(round)
   # rounds est l'array des tours joués par les deux joueurs
   winning_combinations = [
-    ["A1", "A2", "A3"],
-    ["B1", "B2", "B3"],
-    ["C1", "C2", "A3"],
-    ["A1", "B1", "C1"],
-    ["A2", "B2", "C2"],
-    ["A3", "B3", "C3"],
-    ["A1", "B2", "C3"],
-    ["A3", "B2", "C1"],
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+    [1, 5, 9],
+    [3, 5, 7],
   ]
 
   # Est-ce que les trois éléments d'une des combinaisons gagnantes se retrouve dans l'array?
