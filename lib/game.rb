@@ -21,12 +21,13 @@ class Game
     params_player_two = Show.new.create_player_o
     @player_two = Player.new(params_player_two[:name], params_player_two[:type])
     @player_two.save
-    @board.display_board
+    # @board.display_board
     update_game
   end
 
   ## ROUND
   def update_game
     @board.update_board
+    # @board.display_board
   end
 end
